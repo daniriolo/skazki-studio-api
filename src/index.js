@@ -9,6 +9,8 @@ const studentRoutes = require('./routes/students');
 app.use(express.json());
 app.use('/api',studentRoutes);
 
+//static files
+app.use(express.static('public'));
 
 //Routes
 app.get('/', (req,res)=>{
