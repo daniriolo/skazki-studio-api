@@ -4,13 +4,14 @@ const mongoose = require('mongoose');
 require('dotenv').config()
 const port= process.env.PORT || 4000;
 const studentRoutes = require('./routes/students');
+const path = require('path');
 
 //middlewares
 app.use(express.json());
 app.use('/api',studentRoutes);
 
 //static files
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname,'public')));
 
 
 //mongoose connection
