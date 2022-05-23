@@ -12,10 +12,6 @@ app.use('/api',studentRoutes);
 //static files
 app.use(express.static('public'));
 
-//Routes
-app.get('/', (req,res)=>{
-   res.send("API created for SkazkiStudio.com");
-})
 
 //mongoose connection
 mongoose.connect(process.env.MONGO_DB_URL).then(()=>{
