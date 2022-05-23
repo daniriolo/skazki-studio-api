@@ -1,0 +1,8 @@
+body{
+   background-color:#202020;
+}
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
