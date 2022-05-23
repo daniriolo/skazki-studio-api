@@ -7,12 +7,9 @@ const studentSchema=mongoose.Schema({
 		curso: String,
 		progreso: Number
 	}],
-	clasesTerminadas:[{
-		curso: String,
-      finishedAt: Date
-	}],
-	horas: Number,
-   createdAt:Date
+	clasesTerminadas:[String],
+   createdAt:Date,
+	hours:[String]
 });
 
 module.exports=mongoose.model('Student',studentSchema);

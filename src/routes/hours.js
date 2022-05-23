@@ -1,15 +1,15 @@
 const express = require('express');
-const teacherSchema =require('../models/Teacher');
+const hoursSchema =require('../models/Hours');
 const router = express.Router();
 
 //create student
 router.post('/',(req,res)=>{
-   const teacher=teacherSchema({
-      nombre:req.body.nombre,
-      correo:req.body.correo,
-      password:req.body.password
+   const x=new Date();
+   const hour=hoursSchema({
+      createdAt:x,
+      destroyAt:new Date(x.getFullYear(),x.getMonth()+6,x.getDay())
    });
-   teacher
+   hour
    .save()
    .then((data)=>res.json(data))
    .catch((error)=>res.json({message:error}));
@@ -17,7 +17,7 @@ router.post('/',(req,res)=>{
 
 //get all students
 router.get('/',(req,res)=>{
-   teacherSchema.find()
+   hoursSchema.find()
    .then((data)=>res.json(data))
    .catch((error)=>res.json({message:error}));
 } );
@@ -25,20 +25,11 @@ router.get('/',(req,res)=>{
 //get student by id
 router.get('/:id',(req,res)=>{
    const {id}=req.params;
-   teacherSchema.findById(id)
+   hoursSchema.findById(id)
    .then((data)=>res.json(data))
    .catch((error)=>res.json({message:error}));
 } );
 
-
-//update student by id
-router.put('/:id',(req,res)=>{
-   const {id}=req.params;
-   const {nombre,correo,password}=req.body;
-   studentSchema.updateOne({_id:id},{$set:{nombre,correo,password}})
-   .then((data)=>res.json(data))
-   .catch((error)=>res.json({message:error}));
-} );
 
 //delete student by id
 router.delete('/:id',(req,res)=>{
