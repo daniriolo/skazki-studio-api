@@ -1,8 +1,17 @@
 body{
    background-color:#202020;
 }
+h1 , h2{
+   color:white;
+}
+a{
+   color:white;
+   text-decoration:none;
+}
 .container{
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
+
 }
