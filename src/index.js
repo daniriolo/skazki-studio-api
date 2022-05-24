@@ -9,9 +9,15 @@ const classRoutes = require('./routes/classes');
 const teacherRoutes = require('./routes/teachers');
 const hoursRoutes = require('./routes/hours');
 const path = require('path');
+const cors = require('cors');
+
+
 
 //middlewares
 app.use(express.json());
+app.use(cors({
+   origin:"*",
+}))
 app.use('/api/students',studentRoutes);
 app.use('/api/teachers',teacherRoutes);
 app.use('/api/classes',classRoutes);
