@@ -1,5 +1,6 @@
 const mongoose=require('mongoose');
 const classSchema=mongoose.Schema({
+   title:String,
    idioma:String,
    nivel:String,
    horario:{
