@@ -15,7 +15,8 @@ const classSchema=mongoose.Schema({
    precio: Number,
    datetoStart: Date,
    datetoEnd:Date,
-   duracion: Number
+   duracion: Number,
+   active:Boolean
 });
 
 module.exports=mongoose.model('Class',classSchema);

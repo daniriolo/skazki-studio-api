@@ -20,7 +20,8 @@ router.post('/',(req,res)=>{
       precio: req.body.precio,
       datetoStart: new Date(),
       datetoEnd: new Date(),
-      duracion:req.body.duracion
+      duracion:req.body.duracion,
+      active:true
    });
    clase
    .save()
