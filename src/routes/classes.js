@@ -5,6 +5,7 @@ const router = express.Router();
 //create student
 router.post('/',(req,res)=>{
    const clase=classSchema({
+      title:req.body.title,
       idioma:req.body.idioma,
       nivel:req.body.nivel,
       horario:{
@@ -18,7 +19,7 @@ router.post('/',(req,res)=>{
       },
       precio: req.body.precio,
       datetoStart: new Date(),
-      datetoEnd: new Date().setMonth(9),
+      datetoEnd: new Date(),
       duracion:req.body.duracion
    });
    clase
