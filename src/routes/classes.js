@@ -21,7 +21,8 @@ router.post('/',(req,res)=>{
       datetoStart: new Date(),
       datetoEnd: new Date(),
       duracion:req.body.duracion,
-      active:true
+      active:true,
+      tipo:req.body.tipo
    });
    clase
    .save()

@@ -16,7 +16,8 @@ const classSchema=mongoose.Schema({
    datetoStart: Date,
    datetoEnd:Date,
    duracion: Number,
-   active:Boolean
+   active:Boolean,
+   tipo:String
 });
 
 module.exports=mongoose.model('Class',classSchema);
