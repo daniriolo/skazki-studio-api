@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 const studentSchema=mongoose.Schema({
    nombre: String,
-	correo: String,
+	correo: {type : String , unique : true, required : true},
 	password: String,
 	clasesActivas:[{
 		curso: String,
