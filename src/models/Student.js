@@ -8,8 +8,7 @@ const studentSchema=mongoose.Schema({
 		progreso: Number
 	}],
 	clasesTerminadas:[
-		curso:String,
-		finishedAt:Date
+		curso : String
 	],
    createdAt:Date,
 	hours:[String]
